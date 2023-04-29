@@ -1,0 +1,266 @@
+<!-- <aside> 
+<nav id="navbar"> 
+   <header id="um"> Introduction to HTML</header>
+   <ul style="list-style-type: none">
+     <li> <a class="nav-link" href="#introduction"> Introduction </a>
+     </li>
+     <li> <a class="nav-link" href="#what_is_html"> What is HTML? </a>
+     </li>
+     <li> <a class="nav-link" href="#html_head"> HTML Head </a>
+     </li>
+     <li> <a class="nav-link" href="#html_text_fundamentals"> HTML text fundamentals </a>
+     </li>
+     <li> <a class="nav-link" href="#creating_hyperlinks"> Creating Hyperlinks </a>
+     </li>
+     <li> <a class="nav-link" href="#advanced_text_formatting"> Advanced text formatting </a>
+     </li>
+     <li> <a class="nav-link" href="#document_and_website_structure"> Document and website structure </a>
+     </li>
+      <li> <a class="nav-link" href="#html_layout_elements"> HTML layout elements </a>
+     </li>
+     <li> <a class="nav-link" href="#planning_a_website"> Planning a website </a>
+     </li>
+     <li> <a class="nav-link" href="#debugging_html"> Debugging HTML </a>
+     </li>
+   </ul>
+   </nav>
+</aside> -->
+
+<header>
+  <!-- Intro settings -->
+  <style>
+    /* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+      }
+    }
+  </style>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <!-- <div
+    id="intro-example"
+    class="p-5 text-center bg-image"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');"
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+          <h5 class="mb-4">Best & free guide of responsive web design</h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Background image -->
+</header>
+  
+  
+  <main id="main-doc">
+   <article> 
+    <section class="main-section" id="introduction">
+      <header>Introduction</header><br>
+    <p>In this article we cover the absolute basics of HTML, to get you started. We define elements, attributes, and all the other important terms you may have heard, and where they fit into the language. We also show how an HTML element is structured, how a typical HTML page is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!</p>
+  <ul>
+<li>Prerequisites:	Basic computer literacy, basic software installed, and basic knowledge of working with files.</li>
+<li>Objective:	To gain basic familiarity with the HTML language, and get some practice writing a few HTML elements.</li>
+  </ul>
+    </section>
+ <br>
+ <hr>
+ <br>   
+    <section class="main-section" id="what_is_html">
+    <header>What is HTML?</header><br>
+     <p> HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on. The main parts of our element are:</p>
+    <ul>
+<li> The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
+<li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.</li>
+      <li>The content: This is the content of the element, which in this case is just text.</li>
+<li>The element: The opening tag plus the closing tag plus the content equals the element.</li
+      </ul>
+    </section>
+<br>
+<hr>
+<br>   
+  <section class="main-section" id="html_head">
+    <header>HTML Head</header><br>
+     <p>The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page &lt;title&gt;, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
+  <p>The HTML head is the contents of the &lt;head&gt; element — unlike the contents of the &lt;body&gt; element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. </p>
+ <p> We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however can get confused with the &lt;h1&gt; element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
+<ul>
+  <li>The &lt;h1&gt; element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)</li>
+<li>The &lt;title&gt; element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
+  </ul>
+      </section>
+<br>
+<hr>
+<br>         
+  <section class="main-section" id="html_text_fundamentals">
+      <header>HTML text fundamentals</header><br>
+    <p>One of HTML's main jobs is to give text structure and meaning (also known as semantics) so that a browser can display it correctly. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
+    <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.Structured content makes the reading experience easier and more enjoyable.</p>
+    <p>In HTML, each paragraph has to be wrapped in a  &lt;p &gt; element and each heading has to be wrapped in a heading element. There are six heading elements — &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,&lt;h5&gt;, and &lt;h6&gt;. Each element represents a different level of content in the document; &lt;h1&gt; represents the main heading, &lt;h2&gt; represents subheadings, &lt;h3&gt; represents sub-subheadings, and so on. As an example, in a story, &lt;h1&gt; would represent the title of the story,&lt;h2&gt; would represent the title of each chapter and &lt;h3&gt; would represent sub-sections of each chapter.</p>
+   <p> It's really up to you what exactly the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
+<ul>
+<li>Preferably you should just use a single &lt;h1&gt; per page — this is the top level heading, and all others sit below this in the hierarchy.</li>
+<li>Make sure you use the headings in the correct order in the hierarchy. Don't use &lt;h3&gt; to represent subheadings, followed by &lt;h2&gt; to represent sub-subheadings — that doesn't make sense and will lead to weird results.</li>
+<li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.</li>
+    </ul>
+      </section>
+<br>
+<hr>
+<br>
+  <section class="main-section" id="creating_hyperlinks">
+    <header>Creating Hyperlinks</header><br>
+    <p>Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a feature of the Web since the very beginning, but they are what makes the Web a Web — they allow us to link our documents to any other document (or other resource) we want to, we can also link to specific parts of documents, and we can make apps available at a simple web address (contrast this to native apps, which have to be installed and all that business.) Just about any web content can be converted to a link, so that when clicked (or otherwise activated) it will make the web browser go to another web address (URL).</p>
+    <p>A basic link is created by wrapping the text you want to turn into a link inside an &lt;a&gt; element, and giving it an href attribute (also known as a Hypertext Reference , or target) that will contain the web address you want the link to point to.</p>
+    <p>Another attribute you may want to add to your links is title; this is intended to contain supplementary useful information about the link, such as what kind of information the page contains, or things to be aware of.</p>
+      <p>you can turn just about any content into a link, even block level elements. If you had an image you wanted to turn into a link, you could just put the image between &lt;a&gt;&lt;/a&gt; tags. Example:</p><br>
+    <div id="codes">
+    <code>	&nbsp; &lt;a href="https://www.mozilla.org/en-US/"&gt;<br>
+    		&nbsp;&nbsp;  &lt;img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage"&gt;<br>
+	&nbsp; &lt;/a&gt;
+    </code>
+    </div>
+      </section>
+<br>
+<br>
+<hr>
+<br>    
+   <section class="main-section" id="advanced_text_formatting">
+      <header>Advanced text formatting</header><br>
+    <p>There are many other elements in HTML for formatting text, which we didn't get to in the HTML text fundamentals article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.</p>
+    <p>In HTML text fundamentals, we walked through how to mark up basic lists in HTML, but we didn't mention the third type of list you'll occasionally come across — description lists. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers.Description lists use a different wrapper than the other list types — 	&lt;dl&gt;; in addition each term is wrapped in a 	&lt;dt&gt; (description term) element, and each description is wrapped in a 	&lt;dd&gt; (description definition) element.</p>
+    <p>HTML also has features available for marking up quotations; which element you use depends on whether you are marking up a block or inline quotation.f a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a &lt;blockquote&gt;element to signify this, and include a URL pointing to the source of the quote inside a cite attribute. Browser default styling will render this as an indented paragraph, as an indicator that it is a quote.</p>
+  <p>You will occasionally need to use superscript and subscript when marking up items like dates, chemical formulae, and mathematical equations so they have the correct meaning. The &lt;sup&gt;and &lt;sub&gt;elements handle this job. For example:</p><br>
+   <div id="codes">
+     <code>
+      &lt;p&gt;My birthday is on the 25&lt;sup&gt;th&lt;/sup&gt; of May 2001.&lt;/p&gt;<br>
+&lt;p&gt;Caffeine's chemical formula is C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
+    </code>
+     </div>
+<br>
+<br>
+    <p> The output of this code looks like so:</p>
+    <p><p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p></p>
+    </section>
+<br>
+<hr>
+<br>     
+     <section class="main-section" id="document_and_website_structure">
+      <header>Document and website structure</header><br>
+    <p>In addition to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.</p>
+  <p>Webpages can and will look pretty different from one another, but they all tend to share similar standard components, unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly structured:</p>
+<ul>
+<li>header: usually a big strip across the top with a big heading and/or logo. This is where the main common information about a website usually stays from one webpage to another.</li>
+<li>navigation bar: links to the site's main sections; usually represented by menu buttons, links, or tabs. Like the header, this content usually remains consistent from one webpage to another — having inconsistent navigation on your website will just lead to confused, frustrated users. Many web designers consider the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in fact, some also argue that having the two separate is better for accessibility, as screen readers can read the two features better if they are separate.</li>
+<li>main content: a big area in the center that contains most of the unique content of a given webpage, for example, the video you want to watch, or the main story you're reading, or the map you want to view, or the news headlines, etc. This is the one part of the website that definitely will vary from page to page!</li>
+<li>sidebar: some peripheral info, links, quotes, ads, etc. Usually, this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but there are also cases where you'll find some recurring elements like a secondary navigation system.</li>
+<li>footer: a strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critical or secondary to the website itself. The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.</li>
+    </ul>
+   <p>In your HTML code, you can mark up sections of content based on their functionality — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of consequences of not using the right element structure and semantics for the right job. To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:</p>
+
+<p>header: 	&lt;header&gt;.<br>
+navigation bar:	&lt;nav&gt;.<br>
+main content: 	&lt;main&gt;, with various content subsections represented by 	&lt;article&gt;, 	&lt;section&gt;, and 	&lt;div&gt; elements.<br>
+sidebar: 	&lt;aside&gt;; often placed inside 	&lt;main&gt;.<br>
+footer: 	&lt;footer&gt;.</p> 
+  </section>
+<br>
+<hr>
+<br> 
+     <section class="main-section" id="html_layout_elements">
+      <header>HTML layout elements</header><br>
+    <p>It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our HTML element reference. For now, these are the main definitions that you should try to understand:</p>
+  <ul>
+<li> 	&lt;main&gt; is for content unique to this page. Use 	&lt;main&gt; only once per page, and put it directly inside 	&lt;body&gt;. Ideally this shouldn't be nested within other elements.</li>
+<li> 	&lt;article&gt; encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).</li>
+<li>	&lt;section&gt; is similar to 	&lt;article&gt;, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a heading; also note that you can break 	&lt;article&gt;s up into different 	&lt;section&gt;s, or 	&lt;section&gt;s up into different 	&lt;article&gt;s, depending on the context.</li>
+<li>	&lt;aside&gt; contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).</li>
+<li> 	&lt;header&gt; represents a group of introductory content. If it is a child of 	&lt;body&gt; it defines the global header of a webpage, but if it's a child of an 	&lt;article&gt; or 	&lt;section&gt; it defines a specific header for that section (try not to confuse this with titles and headings).</li>
+<li> 	&lt;nav&gt; contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.</li>
+<li> 	&lt;footer&gt; represents a group of end content for a page.</li>
+   </section>
+<br>
+<hr>
+<br> 
+      <section class="main-section" id="planning_a_website">
+      <header>Planning a website</header><br>
+    <p>Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called Information architecture. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!</p>
+   <ul>
+     <li>Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.</li>
+     <li>Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.</li>
+     <li>Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.</li>
+     <li>Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called Card sorting.</li>
+     <li>Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.</li>
+     </ul>
+       </section>
+<br>
+<hr>
+<br> 
+     <section class="main-section" id="debugging_html">
+      <header>Debugging HTML</header><br>
+    <p>Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.</p>
+    <p>When writing code of some kind, everything is usually fine, until that dreaded moment when an error occurs — you've done something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.</p>
+    <p> HTML's element syntax is arguably a lot easier to understand than a "real programming language" like Rust, JavaScript, or Python. The way that browsers parse HTML is a lot more permissive than how programming languages are run, which is both a good and a bad thing. Generally when you do something wrong in code, there are two main types of error that you'll come across:</p>
+<ul>
+<li>Syntax errors: These are spelling errors in your code that actually cause the program not to run, like the Rust error shown above. These are usually easy to fix as long as you are familiar with the language's syntax and know what the error messages mean.</li>
+<li>Logic errors: These are errors where the syntax is actually correct, but the code is not what you intended it to be, meaning that program runs incorrectly. These are often harder to fix than syntax errors, as there isn't an error message to direct you to the source of the error.</li>
+    </ul>
+<p> HTML itself doesn't suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you'll get something running, even if it is not what you expected. This, of course, can still be a problem!</p>
+   <p>It is easy to search through the lines and find the errors, but what about a huge, complex HTML document?</p>
+  <p>The best strategy is to start by running your HTML page through the Markup Validation Service — created and maintained by the W3C, the organization that looks after the specifications that define HTML, CSS, and other web technologies. This webpage takes an HTML document as an input, goes through it, and gives you a report to tell you what is wrong with your HTML.</p>
+  <p>The error messages are usually helpful, but sometimes they are not so helpful; with a bit of practice you can work out how to interpret these to fix your code. Let's go through the error messages and what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.</p>
+<ul>
+<li>"End tag li implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.</li>
+<li>"Unclosed element strong": This is really easy to understand — a 	&lt;strong&gt; element is unclosed, and the line/column information points right to where it is.</li>
+<li>"End tag strong violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where it is.</li>
+<li>"End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.</li>
+"End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. 
+  <li>"Unclosed element ul": This is not very helpful, as the 	&lt;ul&gt; element is closed correctly. This error comes up because the 	&lt;a	&gt; element is not closed, due to the missing closing quote mark.</li>
+       </ul>
+ </section>
+       </article>
+<br>   
+  </main>   
+</>

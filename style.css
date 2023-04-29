@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+ font-family: 'Rubik', sans-serif;
+ line-height: 1.7;
+ background-color: white;
+}
+
+main {
+  color: #1C1C1C;
+  max-width: 70%;
+  position: relative;
+  float: right;
+  font-size: 18px;
+  property: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-section{
+  padding: 30px;
+}
+
+#navbar{
+  color: #1C1C1C;
+  min-width: 26.1%;
+  height: 100%;
+  padding-top: 20px;
+  float: left;
+  position:fixed;
+  background-color: rgba(169, 169, 169, 0.5);
+  font-size: 18px;
+  line-height: 45px;
+  property: flex;
+  flex-direction: column;
+  box-shadow: 3px 2px 8px gray;
+}
+
+code {
+  color: black;
+  font-size: 14px;
+}
+
+#um {
+ padding-left: 15px;  
+}
+
+ul {
+  padding-left: 15px;
+}
+
+header {
+  text-transform: uppercase;
+  text-shadow: 3px 2px 3px gray;
+  font-weight: bold;
+}
+
+#codes {
+  color: #696969;
+  border-radius: 10px;
+  background-color: #A9A9A9;
+  padding: 10px;
+  opacity: 0.6;
+  box-shadow: 3px 2px 8px black;
+}
+
+@media screen and (min-width: 992px){
+  a {
+    color: #AF007A;
+    text-decoration: none;
+  }
+  a:visited {color: #783263;}
+  a:hover {color: #783263;}
+}

@@ -59,16 +59,16 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="motivation">Motivation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="dataset">Dataset</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="approach">Approach</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="model">Models used</a>
           </li>
         </ul>
       </div>
@@ -99,74 +99,57 @@
    <article> 
     <section class="main-section" id="introduction">
       <header>Introduction</header><br>
-    <p>In this article we cover the absolute basics of HTML, to get you started. We define elements, attributes, and all the other important terms you may have heard, and where they fit into the language. We also show how an HTML element is structured, how a typical HTML page is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!</p>
-  <ul>
-<li>Prerequisites:	Basic computer literacy, basic software installed, and basic knowledge of working with files.</li>
-<li>Objective:	To gain basic familiarity with the HTML language, and get some practice writing a few HTML elements.</li>
-  </ul>
+    <p>Code Maroon Global Edition: The app that sifts through the noise and delivers the real deal to first responders and relevant authorities.</p>
     </section>
  <br>
  <hr>
  <br>   
-    <section class="main-section" id="what_is_html">
-    <header>What is HTML?</header><br>
-     <p> HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on. The main parts of our element are:</p>
-    <ul>
-<li> The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
-<li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.</li>
-      <li>The content: This is the content of the element, which in this case is just text.</li>
-<li>The element: The opening tag plus the closing tag plus the content equals the element.</li
-      </ul>
+    <section class="main-section" id="motivation">
+    <header>Motivation</header><br>
+    <p>Information retrieval is a critical component of crisis response, but it's not always easy to find reliable sources in the midst of chaos. Rumours, gossip, and wild speculation run rampant, leaving authorities scrambling to sort fact from fiction. In this scenario, there is a need for a global, reliable and user friendly application to provide quick and accurate facts to the general masses.</p>
     </section>
 <br>
 <hr>
 <br>   
-  <section class="main-section" id="html_head">
-    <header>HTML Head</header><br>
-     <p>The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page &lt;title&gt;, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
-  <p>The HTML head is the contents of the &lt;head&gt; element — unlike the contents of the &lt;body&gt; element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document. </p>
- <p> We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however can get confused with the &lt;h1&gt; element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
-<ul>
-  <li>The &lt;h1&gt; element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)</li>
-<li>The &lt;title&gt; element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
-  </ul>
-      </section>
+  <section class="main-section" id="dataset">
+    <header>Dataset employed</header><br>
+     <p>CMGE uses the stream of data from social media (Twitter, Reddit), News about an event based on which we can ask queries to the system and get answers based on the news content. </p>
+     <p>The CrisisFACT dataset is a collection of tweets that were posted during various crisis events, including natural disasters, terrorist attacks, and other emergencies. The dataset was created to help researchers and developers better understand how people use social media during times of crisis and to develop new tools and technologies to support crisis response and recovery efforts.</p>
+     <p>For each day during an event, the following content is available:</p>
+     <ol>
+      <li>Twitter stream: This stream provides real-time updates from Twitter users who are discussing the crisis event. The tweets are collected based on keywords and may include noise or irrelevant content, but they can still provide valuable insights into how people are responding to the event and what information they are sharing.</li>
+      <li>Reddit stream: The Reddit stream provides a more in-depth view of how people are discussing the crisis event on social media. The stream includes both the original submission and subsequent comments within relevant threads. While some comments may not be informative, the stream can provide a more detailed understanding of the conversation around the event.</li>
+      <li>Facebook stream: The Facebook stream provides posts from public pages that are relevant to the crisis event. While the text content of these posts cannot be directly shared, the post and page IDs are included in the stream, which can be used to manually collect the data.</li>
+      <li>News stream: The news stream includes articles from traditional news agencies that are reporting on the crisis event. These articles can provide valuable context and analysis of the event, as well as updates on the latest developments.</li>
+     </ol>
+     <p>Analysing these data streams can provide a more complete picture of the crisis event, including how people are responding, what information they are sharing, and what actions are being taken by authorities and organisations.</p>
+  </section>
 <br>
 <hr>
 <br>         
-  <section class="main-section" id="html_text_fundamentals">
-      <header>HTML text fundamentals</header><br>
-    <p>One of HTML's main jobs is to give text structure and meaning (also known as semantics) so that a browser can display it correctly. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
-    <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.Structured content makes the reading experience easier and more enjoyable.</p>
-    <p>In HTML, each paragraph has to be wrapped in a  &lt;p &gt; element and each heading has to be wrapped in a heading element. There are six heading elements — &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,&lt;h5&gt;, and &lt;h6&gt;. Each element represents a different level of content in the document; &lt;h1&gt; represents the main heading, &lt;h2&gt; represents subheadings, &lt;h3&gt; represents sub-subheadings, and so on. As an example, in a story, &lt;h1&gt; would represent the title of the story,&lt;h2&gt; would represent the title of each chapter and &lt;h3&gt; would represent sub-sections of each chapter.</p>
-   <p> It's really up to you what exactly the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
-<ul>
-<li>Preferably you should just use a single &lt;h1&gt; per page — this is the top level heading, and all others sit below this in the hierarchy.</li>
-<li>Make sure you use the headings in the correct order in the hierarchy. Don't use &lt;h3&gt; to represent subheadings, followed by &lt;h2&gt; to represent sub-subheadings — that doesn't make sense and will lead to weird results.</li>
-<li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.</li>
-    </ul>
+  <section class="main-section" id="approach">
+      <header>Project approach</header><br>
+    <p>We use the news feed data here(Headings). First, we use a sentence transformer for getting word embeddings of all headings in the news feed and then use cosine similarity to compare these heading embeddings to the input query embeddings and filter out the top n headings and form the context. Then pass this context and the input query to the QnA model and get output.</p>
+    <img src="method_flow.jpg" alt="Method flowchart">
       </section>
 <br>
 <hr>
 <br>
-  <section class="main-section" id="creating_hyperlinks">
-    <header>Creating Hyperlinks</header><br>
-    <p>Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a feature of the Web since the very beginning, but they are what makes the Web a Web — they allow us to link our documents to any other document (or other resource) we want to, we can also link to specific parts of documents, and we can make apps available at a simple web address (contrast this to native apps, which have to be installed and all that business.) Just about any web content can be converted to a link, so that when clicked (or otherwise activated) it will make the web browser go to another web address (URL).</p>
-    <p>A basic link is created by wrapping the text you want to turn into a link inside an &lt;a&gt; element, and giving it an href attribute (also known as a Hypertext Reference , or target) that will contain the web address you want the link to point to.</p>
-    <p>Another attribute you may want to add to your links is title; this is intended to contain supplementary useful information about the link, such as what kind of information the page contains, or things to be aware of.</p>
-      <p>you can turn just about any content into a link, even block level elements. If you had an image you wanted to turn into a link, you could just put the image between &lt;a&gt;&lt;/a&gt; tags. Example:</p><br>
-    <div id="codes">
-    <code>	&nbsp; &lt;a href="https://www.mozilla.org/en-US/"&gt;<br>
-    		&nbsp;&nbsp;  &lt;img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage"&gt;<br>
-	&nbsp; &lt;/a&gt;
-    </code>
-    </div>
+  <section class="main-section" id="model">
+    <header>Models employed</header><br>
+    <h3>RoBERTa</h3>
+    <p>Robustly Optimized BERT Pretraining Approach: It is a transformer based-language model developed by Facebook AI Research in 2019. The widely used BERT (Bidirectional Encoder Representations from Transformers) model has been expanded with the help of RoBERTa, which aims to enhance pretraining and boost performance on downstream NLP tasks. A specific version of the RoBERTa model that has been optimized on the Stanford Question Answering Dataset (SQuAD) 2.0 is called RoBERTa-Base-SQuAD2. The SQuAD2.0 dataset serves as a benchmark for computer comprehension and asks models to read passages and respond to questions about them.
+      
+      <br>Based on the context presented in the passage, the RoBERTa-Base-SQuAD2 model is trained to predict the response to a given question. The SQuAD2.0 dataset is used to fine-tune the model after it has been pre-trained on a sizable corpus of text using a combination of supervised learning and transfer learning strategies.
+      
+      <br>RoBERTa-Base-SQuAD2 model is fine-tuned to increase the odds of correctly predicting an answer to a given question while lowering the likelihood of correctly predicting irrelevant or wrong replies.
+      </p>
       </section>
 <br>
 <br>
 <hr>
 <br>    
-   <section class="main-section" id="advanced_text_formatting">
+   <!-- <section class="main-section" id="advanced_text_formatting">
       <header>Advanced text formatting</header><br>
     <p>There are many other elements in HTML for formatting text, which we didn't get to in the HTML text fundamentals article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.</p>
     <p>In HTML text fundamentals, we walked through how to mark up basic lists in HTML, but we didn't mention the third type of list you'll occasionally come across — description lists. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers.Description lists use a different wrapper than the other list types — 	&lt;dl&gt;; in addition each term is wrapped in a 	&lt;dt&gt; (description term) element, and each description is wrapped in a 	&lt;dd&gt; (description definition) element.</p>
@@ -263,4 +246,4 @@ footer: 	&lt;footer&gt;.</p>
        </article>
 <br>   
   </main>   
-</>
+</> -->

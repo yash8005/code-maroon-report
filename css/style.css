@@ -6,31 +6,78 @@
  */
 
 /*  typography */
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400");
+
+/* @font-face{
+  font-family:"helvetica";
+  src:url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+  url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+  url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+} */
+
+
 body {
   line-height: 1.2;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-  Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
+  /* font-family: Helvetica; */
   color: #4c4c4c;
   
 }
 
-.background-image{
-  background: url(images/tamu.jpeg) no-repeat center center fixed; 
+
+
+.bg-image{
+  background: url(images/blur.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  
 }
 
 
+.col-lg-11{
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 10px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid maroon;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: maroon;
+}
+
 .cover {
   position:absolute;
-  top:130px;
+  top:170px;
   left:50%; /* Positions 50% from right (right edge will be at center) */
   margin-left:150px; /* Positions 200px to the left of center */
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
 }
 
 p, .paragraph {
@@ -38,8 +85,8 @@ p, .paragraph {
   color: #4c4c4c;
   font-size: 15px;
   line-height: 1.8;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-  Helvetica, Arial, "Lucida Grande", sans-serif;
+  
+  
 }
 p-lg, .paragraph-lg {
   font-size: 18px;
@@ -48,7 +95,7 @@ p-lg, .paragraph-lg {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   line-height: 1.2;
 }
 
@@ -89,7 +136,7 @@ h6, .h6 {
 /* Button style */
 .btn {
   font-size: 22px;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -215,7 +262,7 @@ a:hover {
 }
 .section-title {
   margin-bottom: 80px;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
 }
 
 .bg-cover {
@@ -325,11 +372,11 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: "Playfair Display", serif !important;
+  /* font-family: "Playfair Display", serif !important; */
 }
 
 .font-tertiary {
-  font-family: "Playfair Display", serif !important;
+  /* font-family: "Playfair Display", serif !important; */
 }
 
 .shadow {
@@ -413,27 +460,27 @@ textarea.form-control {
 
 /* /card */
 .navigation {
-  padding: 10px 130px;
+  padding: 0px 130px;
   transition: 0.3s ease;
 }
 .navigation.nav-bg {
   /* background-color: maroon; */
-  padding: 10px 100px;
+  padding: 0px 0px;
 }
 @media (max-width: 991px) {
   .navigation.nav-bg {
-    padding: 10px 10px;
+    padding: 0px 0px;
   }
 }
 @media (max-width: 991px) {
   .navigation {
-    padding: 10px;
+    padding: 0px;
     /* background: maroon; */
   }
 }
 
 .navbar .nav-item .nav-link {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   text-transform: uppercase;
   padding: 15px;
 }
@@ -734,7 +781,7 @@ blockquote {
   margin-bottom: 20px;
 }
 .content strong {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-size: 22px;
   font-weight: normal;
   color: #000;

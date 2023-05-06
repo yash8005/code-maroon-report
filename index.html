@@ -104,8 +104,8 @@
         <h1 class="text-white font-tertiary"><b>Code Maroon: <br> Global Edition</b></h1>
         <h4 class="text-white font-tertiary"><b>The app that sifts through the noise and delivers<br> the real deal to first responders and relevant authorities.</b></h4>
         <br><br>
-        <a href="https://codemaroon.streamlit.app/" type="button" class="cta"><b>Try the Demo!</b></a>
-        <a href="https://github.com/yash8005/code-maroon-deploy" type="button" class="cta"><b>Code</b></a>
+        <a href="https://codemaroon.streamlit.app/" type="button" class="cta" target="_blank"><b>Try the Demo!</b></a>
+        <a href="https://github.com/yash8005/code-maroon-deploy" type="button" class="cta" target="_blank"><b>Code</b></a>
       </div>
     </div>
   </div>
@@ -159,7 +159,8 @@
         <h3 class="section-title"><b>Motivation</b></h4>
         
         <p class="font-secondary paragraph-lg text-dark">Information retrieval is a critical component of crisis response, but it's not always easy to find reliable sources in the midst of chaos. Rumors, gossip, and wild speculation run rampant, leaving authorities scrambling to sort fact from fiction. In this scenario, there is a need for a global, reliable and user friendly application to provide quick and accurate facts to the general masses.
-          <br> This task is from <b>2022 TREC CrisisFACTs Track: </b> <a href="https://crisisfacts.github.io/">https://crisisfacts.github.io/</a>
+          <br><br> The motivation behind this project is to develop a system that can efficiently extract relevant facts and information from unstructured data during a crisis event. This system will use state-of-the-art natural language processing, information retrieval and machine learning techniques to extract accurate and timely information from news articles and social media platforms such as Twitter and Reddit. By developing such a system, we hope to contribute to the field of crisis management and provide a valuable tool for individuals and emergency response teams during crisis events.
+          <br><br>This task is from <b>2022 TREC CrisisFACTs Track: </b> <a href="https://crisisfacts.github.io/" target="_blank">https://crisisfacts.github.io/</a>
         </p>
       </div>
     </div>
@@ -217,8 +218,8 @@
     </div>
   </div> -->
   <p class="font-secondary paragraph-lg text-dark">
-    CMGE uses the stream of data from News articles, social media platform (Twitter, Reddit and Facebook), about an event based on which we can ask queries to the system and get answers based on the relevant content.
-    <br> The CrisisFACTs dataset is a collection of News articles, social media platform (Twitter, Reddit and Facebook) that were posted during various crisis events, such as Wildfires, Hurricanes, Floods, terrorist attacks, and other emergencies. The dataset was created to help researchers and developers better understand how people use social media and News during times of crisis and to develop new tools and technologies to support crisis response and recovery efforts.
+    CMGE uses the stream of data from News articles, social media platforms (Twitter, Reddit and Facebook), about an event based on which we can ask queries to the system and get answers based on the relevant content.
+    <br> The CrisisFACTs dataset is a collection of News articles, social media platform posts (Twitter, Reddit and Facebook) that were posted during various crisis events, such as Wildfires, Hurricanes, Floods, and other emergencies. The dataset was created to help researchers and developers better understand how people use social media and News during times of crisis and to develop new tools and technologies to support crisis response and recovery efforts.
     </p>
     <img src = 'images/flow1.png' style="width:800px;height:700px; display: block;
     margin-left: auto;
@@ -270,12 +271,12 @@
 	<div class="column">
 		<p class="font-secondary paragraph-lg text-dark"><ul class="font-secondary paragraph-lg text-dark" style = 'list-style:disc; line-height:200%'><li>The first step in this task is to collect and preprocess the data. This involves gathering a stream of data from given dataset collected from various sources such as news articles and social media (Twitter, Reddit).</li> 
       <li>The data is then preprocessed to remove irrelevant texts to get relevant context text for fact retrieval. This includes tasks such as removal of Media names from News articles, Twitter handles, and hyperlinks from tweets.</li>
-      <li>We call the relevant extracted context text “Headlines”. These headlines are then divided into chunks of data and further these chunks are embedded and stored in chroma DB. For embedding of chunks Sentence-Transformer model “paraphrase-MiniLM-L6-v2” is used as it captures sentence semantics giving us effective sentence embeddings of the headline's chunks.</li>
+      <li>We collected the relevant extracted context text “Headlines”. These headlines are then divided into chunks of data and further these chunks are embedded and stored in chroma DB. For embedding of chunks Sentence-Transformer model “paraphrase-MiniLM-L6-v2” is used as it captures sentence semantics giving us effective sentence embeddings of the headline's chunks.</li>
       <li>The next tasks involve extracting relevant headline chunks from a pool of embedded headline data via query. This task is achieved by first embedding the query using the Sentence-Transformer model “paraphrase-MiniLM-L6-v2”. Cosine similarity was performed on Embedded query vectors and Embedded headline data chunks to get similarity scores. Top-k headline chunks are chosen based on similarity score which gives us the relevant data (called documents) corresponding to the query.</li>
       <li>Once we have a query and corresponding relevant documents, we intend to extract exact facts from the relevant documents using large language models (LLMs) modeling this subtask as a “Question-Answering task”.</li>
       <li>We chose the LLM's, based on the following criteria that the Model is pre-trained for Question-Answering (QA) tasks on QA datasets like SQuAD dataset. (Stanford Question answering dataset).</li>
       <li>We used 3 models which were successful in performing fact extraction in the subtask of Question-Answering which were “deepset/roberta-base-squad2; BERT based model”, “Google Flan T5 Model”, and “Open AI text-davinci-002 - GPT 3.5 series model”. </li>
-      <li>Input to these models were the embeddings of Query and retrieved relevant documents. For, Input to Roberta model tokenizer of the “deepset/roberta-base-squad2” model is used to tokenize the inputs. The output of the models was the extracted facts in answers form which is given in the results section.</li>
+      <li>Input to these models were the embeddings of Query and retrieved relevant documents. For, Input to Roberta model tokenizer of the “deepset/roberta-base-squad2” model is used to tokenize the inputs. The output of the models was the extracted facts in answers form which is given in the <a href="#Evaluationr">results</a> section.</li>
     </ul></p>
 	</div>
 	<div class="column">
@@ -288,7 +289,7 @@
   <div>
     <br>
     <p class="font-secondary paragraph-lg text-dark" style="text-align:left;"><b>Failed case:</b>
-    <p class="font-secondary paragraph-lg text-dark" style="text-align:justify;" >We have tried to use the “XLNetForQuestionAnswering” model as an LLM model which is pre-trained with QA Dataset. This Model is then fine-tuned by us with SQuAD 2.0 dataset on “TAMU HPRC”. The input to the model was the queries and retrieved relevant documents (from the cosine similarity step) tokenized by the “xlnet-base-cased ” tokenizer. The results of this model were not satisfactory, and the reason is discussed in the evaluation section. </p>
+    <p class="font-secondary paragraph-lg text-dark" style="text-align:justify;" >We have tried to use the “XLNetForQuestionAnswering” model as an LLM model which is pre-trained with QA Dataset. This Model is then fine-tuned by us with SQuAD 2.0 dataset on “TAMU HPRC”. The input to the model was the queries and retrieved relevant documents (from the cosine similarity step) tokenized by the “xlnet-base-cased ” tokenizer. The results of this model were not satisfactory, and the reason is discussed in the <a href="#Evaluationm">evaluation</a> section. </p>
   </div>
   
 </section>
@@ -353,9 +354,9 @@
   </div>
   <!-- bg image -->
   <!-- <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image"> -->
-  <p class="font-secondary paragraph-lg text-dark" style="text-align:left;">We have used the following evaluation models for comparison: <br> 1. <a href="https://huggingface.co/deepset/roberta-base-squad2">RoBERTa model</a> 
-    <br> 2. <a href="https://huggingface.co/google/flan-t5-base">Google Flan T5</a>
-    <br> 3. <a href="https://platform.openai.com/docs/models/gpt-3-5">Open AI model</a>
+  <p class="font-secondary paragraph-lg text-dark" style="text-align:left;">We have used the following evaluation models for comparison: <br> 1. <a href="https://huggingface.co/deepset/roberta-base-squad2" target="_blank">RoBERTa model</a> 
+    <br> 2. <a href="https://huggingface.co/google/flan-t5-base" target="_blank">Google Flan T5</a>
+    <br> 3. <a href="https://platform.openai.com/docs/models/gpt-3-5" target="_blank">Open AI text-davinci-003 model</a>
   </p>
   <img src="images/model1.png" alt="bg-shape" style="width:100%;">
   <img src="images/model2.png" alt="bg-shape" style="width:100%;">
@@ -381,49 +382,49 @@
         <div class="row">
           <body>
             <div class="column">
-              <p class="font-secondary paragraph-lg text-dark">We have created human-annotated queries for fact extraction. There are two categories of generated queries: “Numerical and Fact-based queries” and “general queries”. These queries are being used to test the algorithm and evaluate the model output for any crisis event. The fact extracted output is evaluated using metrics: “Average Exact Match, Average F1 score, Average Recall, Average Precision.” 
+              <p class="font-secondary paragraph-lg text-dark">We have created human-annotated queries for fact extraction. There are two categories of generated queries: “Numerical and Fact-based queries” and “general queries”. These queries are being used to test the algorithm and evaluate the model output for any crisis event. The fact extracted output is evaluated using metrics: “Average Exact Match, Average F1 score, Average Recall, and Average Precision.” 
   
-                <br><br>The Sally Hurricane crisis event which happened in Louisiana state of US, is considered for evaluation. <a href = "images/Query_Results_Roberta.pdf">Text 1</a> (pdf) shows the example output for Roberta's model for General query. 
-                <br><br>Table 1 gives the Summary of the evaluation of all models with “Numerical and Fact-based queries” and “general queries”. Fig 1 shows the same evaluation result in the line chart. 
-                <br><br>Fig 2 shows the Performance of Models for “Numerical and Factual Queries”. (Already on the website) 
-                <br><br>Fig 3 shows the Performance of Models for “General Queries”. (Already on the website)
+                <br><br>The Sally Hurricane crisis event which happened in Louisiana state of US, is considered for evaluation. <a href = "images/Query_Results_Roberta.pdf" target="_blank">Text 1</a> (pdf) shows the example output for Roberta's model for General queries. 
+                <br><br>Table 1 gives the Summary of the evaluation of all models with “Numerical and Fact-based queries” and “general queries”. Fig 3 shows the same evaluation result in the line chart. 
+                <br><br>Fig 4 shows the Performance of Models for “Numerical and Factual Queries”.
+                <br><br>Fig 5 shows the Performance of Models for “General Queries”.
                 <br><br><b>Evaluation of all models on different metrics gives the clear idea that the Google Flan T5 model performed better for our use case, where it gives the highest “Average Recall value” for “Numerical and Fact-based queries” which is near 60%.</b>
                 <br><br>Open AI text-davinci-003 model gives higher precision for both types of queries. One of the main observations was that as it is a generative model, it generates a lot of words around the extracted facts which are probably not relevant to the extracted facts, and due to generating a higher number of words for a query, its precision percentage increases but the recall percentage remains less.
-                <br><br>As the T5 model was giving better results outperforming the other two models, we further investigated the results by changing different parameters for our approach. “k” value in the “Top k” documents chosen as relevant documents is varied to get the best results and metrics for the T5 model. The results gave us interesting observations. For “Numerical and Fact-based queries” after “k = 3” (Given in Fig 4), the Average Recall decreases and for “General queries” after ¬“k=50” (Given in Fig 5), the Average Recall decreases. 
-                <br>Therefore, for “Numerical and Fact-based queries” the best k value is “k = 3”, and for “General queries” the best k value is ¬“k=50”.
+                <br><br>As the T5 model was giving better results outperforming the other two models, we further investigated the results by changing different parameters for our approach. “k” value in the “Top k” documents chosen as relevant documents is varied to get the best results and metrics for the T5 model. The results gave us interesting observations. For “Numerical and Fact-based queries” after “k = 3” (Given in Fig 6), the Average Recall decreases and for “General queries” after “k = 50” (Given in Fig 7), the Average Recall decreases. 
+                <br>Therefore, for “Numerical and Fact-based queries” the best k value is “k = 3”, and for “General queries” the best k value is “k = 50”.
                 <br><br><br>
                 <b>Failed case analysis:</b>
                 <br>Model XLNetForQuestionAnswering was trained using the below parameters:
                 <br>Optimizer: Adam
-                <br>Learning rate: 1e5
+                <br>Learning rate: 1e-5
                 <br>Epochs : 3
-                <br>A possible failure reason can be the not optimal hyperparameters for training. Due to time constraints, we couldn’t train and test the model to get better results.
-                <br>As a Future work, multiple possible optimal hyperparameters can be used to fine-tune the model. Another possible reason for bad output could be domain-specific training. If the XLNetForQuestionAnswering model could be trained on crisis data with a lot of human-annotated questions and answers, it might perform better. Though it needs a lot of effort to generate a large training dataset for supervised learning.
+                <br><br>A possible failure reason can be the non optimal hyperparameters for training. Due to time constraints, we couldn’t explore and train the model for different hyperparameters to get better results.
+                <br><br>As a Future work, multiple possible optimal hyperparameters can be used to fine-tune the model. Another possible reason for bad output could be domain-specific training. If the XLNetForQuestionAnswering model could be trained on crisis data with a lot of human-annotated questions and answers, it might perform better. Though it needs a lot of effort to generate a large training dataset for supervised learning.
                 </p>
             </div>
             <div class="column">
               <figure>
-                <img src="images/table1.jpg" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+                <img src="images/table1.jpg" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Table 1: </b> Evaluation result of 3 models for “Numerical and Fact-based queries” and “general queries”</figcaption>
             </figure><br><br><br><br>
               <figure>
-                <img src="images/evalres.png" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+                <img src="images/evalres.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 3:</b> Evaluation result of 3 models for “Numerical and Fact-based queries” and “general queries”</figcaption>
             </figure><br><br><br><br>
               <figure>
-                <img src="images/chart1.png" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+                <img src="images/chart1.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 4:</b> Performance of Models for Numerical and Factual Queries</figcaption>
             </figure><br><br><br><br>
             <figure>
-              <img src="images/chart2.png" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+              <img src="images/chart2.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
               <figcaption><b>Fig 5:</b> Performance of Models for General Queries</figcaption>
           </figure><br><br><br><br>
           <figure>
-            <img src="images/chart3.png" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+            <img src="images/chart3.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
             <figcaption><b>Fig 6:</b> Performance of Flan-T5 Model for different Top-n Documents (Numerical and Factual Queries)</figcaption>
         </figure><br><br><br><br>
               <figure>
-                <img src="images/chart4.png" alt="bg-shape" style="width:60%; border: 3px solid #555;">
+                <img src="images/chart4.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 7: </b>Performance of Flan-T5 Model for different Top-n Documents (General Queries)</figcaption>
             </figure>
             </div>
@@ -489,6 +490,16 @@
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="section-title"><b>Conclusion</b></h2>
+        <p class="font-secondary paragraph-lg text-dark">
+          We have proposed an approach for fact extraction from crisis event data using a combination of natural language processing, IR and machine learning techniques. Our approach involves data preprocessing, embedding, and retrieval, followed by fact extraction using large language models. We have evaluated our approach using human-annotated queries for fact extraction and compared the performance of three different models: BERT-based model, Google Flan T5 model, and Open AI text-davinci-003 model.
+ 
+<br>Our evaluation results show that the Google Flan T5 model performs the best for our use case, with the highest recall value for numerical and fact-based queries. However, the Open AI text-davinci-003 model gives higher precision for both types of queries, but generates extraneous words, resulting in a lower recall value. We also found that the optimal value for the "k" parameter for retrieving relevant documents varies based on the type of query.
+ 
+<br>Although our approach has shown promising results, there are still areas for improvement. For instance, we have evaluated our approach on one type of crisis event dataset (Sally Hurricane), and it is possible that the performance may vary for other type of events or datasets. Additionally, our approach can be further improved by fine-tuning hyperparameters and using additional models for fact extraction.
+ 
+<br>Overall, our approach provides a foundation for fact extraction from crisis event data, which can be useful for disaster response teams, news organizations, and other stakeholders who need to quickly access accurate information during a crisis event.
+
+</p>
       </div>
     </div>
     <!-- <div class="row shuffle-wrapper">

@@ -400,31 +400,38 @@
                 <br>Epochs : 3
                 <br><br>A possible failure reason can be the non optimal hyperparameters for training. Due to time constraints, we couldn’t explore and train the model for different hyperparameters to get better results.
                 <br><br>As a Future work, multiple possible optimal hyperparameters can be used to fine-tune the model. Another possible reason for bad output could be domain-specific training. If the XLNetForQuestionAnswering model could be trained on crisis data with a lot of human-annotated questions and answers, it might perform better. Though it needs a lot of effort to generate a large training dataset for supervised learning.
-                </p>
+                <br><br><br>
+                <b>Metric Glossary:</b><br>
+                -	<b>Average Precision (AP)</b> is a metric that measures the quality of the ranked results, i.e., how many of the predicted positives are actually positive. It is calculated as the area under the precision-recall curve, and ranges between 0 and 1. A higher AP score indicates better performance.
+<br>-	<b>Average Recall (AR)</b> is a metric that measures the completeness of the ranked results, i.e., how many of the actual positives were retrieved by the model. It is calculated as the ratio of the true positives to the total number of actual positives, and also ranges between 0 and 1. A higher AR score indicates better performance.
+<br>-	<b>Average F1 score</b> is the harmonic mean of the precision and recall scores, and is a commonly used metric to evaluate classification models. It is calculated as 2 * ((precision * recall) / (precision + recall)), and ranges between 0 and 1. A higher F1 score indicates better performance.
+<br>-	<b>Average Exact match</b> is a metric that measures the percentage of instances for which the predicted label matches the true label exactly. It is calculated as the ratio of the number of instances for which the predicted label is an exact match to the true label to the total number of instances. A higher exact match score indicates better performance.
+ 
+              </p>
             </div>
             <div class="column">
               <figure>
-                <img src="images/table1.jpg" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+                <img src="images/table1.jpg" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Table 1: </b> Evaluation result of 3 models for “Numerical and Fact-based queries” and “general queries”</figcaption>
             </figure><br><br><br><br>
               <figure>
-                <img src="images/evalres.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+                <img src="images/evalres.png" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 3:</b> Evaluation result of 3 models for “Numerical and Fact-based queries” and “general queries”</figcaption>
             </figure><br><br><br><br>
               <figure>
-                <img src="images/chart1.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+                <img src="images/chart1.png" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 4:</b> Performance of Models for Numerical and Factual Queries</figcaption>
             </figure><br><br><br><br>
             <figure>
-              <img src="images/chart2.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+              <img src="images/chart2.png" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
               <figcaption><b>Fig 5:</b> Performance of Models for General Queries</figcaption>
           </figure><br><br><br><br>
           <figure>
-            <img src="images/chart3.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+            <img src="images/chart3.png" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
             <figcaption><b>Fig 6:</b> Performance of Flan-T5 Model for different Top-n Documents (Numerical and Factual Queries)</figcaption>
         </figure><br><br><br><br>
               <figure>
-                <img src="images/chart4.png" alt="bg-shape" style="width:60%; border: 3px solid #555;"><br><br>
+                <img src="images/chart4.png" alt="bg-shape" style="width:90%; border: 3px solid #555;"><br><br>
                 <figcaption><b>Fig 7: </b>Performance of Flan-T5 Model for different Top-n Documents (General Queries)</figcaption>
             </figure>
             </div>

@@ -157,7 +157,10 @@
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <h3 class="section-title"><b>Motivation</b></h4>
-        <p class="font-secondary paragraph-lg text-dark">Information retrieval is a critical component of crisis response, but it's not always easy to find reliable sources in the midst of chaos. Rumors, gossip, and wild speculation run rampant, leaving authorities scrambling to sort fact from fiction. In this scenario, there is a need for a global, reliable and user friendly application to provide quick and accurate facts to the general masses.</p>
+        
+        <p class="font-secondary paragraph-lg text-dark">Information retrieval is a critical component of crisis response, but it's not always easy to find reliable sources in the midst of chaos. Rumors, gossip, and wild speculation run rampant, leaving authorities scrambling to sort fact from fiction. In this scenario, there is a need for a global, reliable and user friendly application to provide quick and accurate facts to the general masses.
+          <br> This task is from <b>2022 TREC CrisisFACTs Track: </b> <a href="https://crisisfacts.github.io/">https://crisisfacts.github.io/</a>
+        </p>
       </div>
     </div>
   </div>
@@ -266,13 +269,13 @@
 <body>
 	<div class="column">
 		<p class="font-secondary paragraph-lg text-dark"><ul class="font-secondary paragraph-lg text-dark" style = 'list-style:disc; line-height:200%'><li>The first step in this task is to collect and preprocess the data. This involves gathering a stream of data from given dataset collected from various sources such as news articles and social media (Twitter, Reddit).</li> 
-      <li>The data is then preprocessed to remove irrelevant texts to get relevant context text for fact retrieval. This includes tasks such as removal of Media name from News articles, Twitter handles and hyperlinks from tweets.</li>
+      <li>The data is then preprocessed to remove irrelevant texts to get relevant context text for fact retrieval. This includes tasks such as removal of Media names from News articles, Twitter handles, and hyperlinks from tweets.</li>
       <li>We call the relevant extracted context text “Headlines”. These headlines are then divided into chunks of data and further these chunks are embedded and stored in chroma DB. For embedding of chunks Sentence-Transformer model “paraphrase-MiniLM-L6-v2” is used as it captures sentence semantics giving us effective sentence embeddings of the headline's chunks.</li>
-      <li>Next tasks involve extracting relevant headline's chunks from a pool of embedded headline data via query. This task is achieved by first embedding the query using Sentence-Transformer model “paraphrase-MiniLM-L6-v2”. Cosine similarity performed on Embedded query vector and Embedded headline data chunks to get similarity scores. Top-k headline chunks are chosen based on similarity score which gives us the relevant data (called documents) corresponding to the query.</li>
-      <li>Once we have a query and corresponding relevant documents, we intend to extract exact fact from the relevant documents using large language models (LLMs) modelling this subtask as a “Question-Answering task”.</li>
-      <li>We chose the LLM's, based on following criteria that the Model is pre-trained for Question-Answering (QA) task on QA datasets like SQuAD dataset. (Stanford Question answering dataset).</li>
-      <li>We used 3 models which were successful in performing fact extraction in the subtask of Question-Answering which were “Roberta-BERT based model”, “Google Flan T5 Model”, and “Open AI text-davinci-002 - GPT 3.5 series model”. </li>
-      <li>Input to these models were the embeddings of Query and retrieved relevant documents. Output of the models were the extracted facts in answers form which given in results section.</li>
+      <li>The next tasks involve extracting relevant headline chunks from a pool of embedded headline data via query. This task is achieved by first embedding the query using the Sentence-Transformer model “paraphrase-MiniLM-L6-v2”. Cosine similarity was performed on Embedded query vectors and Embedded headline data chunks to get similarity scores. Top-k headline chunks are chosen based on similarity score which gives us the relevant data (called documents) corresponding to the query.</li>
+      <li>Once we have a query and corresponding relevant documents, we intend to extract exact facts from the relevant documents using large language models (LLMs) modeling this subtask as a “Question-Answering task”.</li>
+      <li>We chose the LLM's, based on the following criteria that the Model is pre-trained for Question-Answering (QA) tasks on QA datasets like SQuAD dataset. (Stanford Question answering dataset).</li>
+      <li>We used 3 models which were successful in performing fact extraction in the subtask of Question-Answering which were “deepset/roberta-base-squad2; BERT based model”, “Google Flan T5 Model”, and “Open AI text-davinci-002 - GPT 3.5 series model”. </li>
+      <li>Input to these models were the embeddings of Query and retrieved relevant documents. For, Input to Roberta model tokenizer of the “deepset/roberta-base-squad2” model is used to tokenize the inputs. The output of the models was the extracted facts in answers form which is given in the results section.</li>
     </ul></p>
 	</div>
 	<div class="column">
@@ -282,6 +285,12 @@
     <img src = 'images/flow3.png' style="width: 100%; border: 3px solid #555;" align-content: center;><br><br>
     <p class="font-secondary paragraph-lg text-dark" style="text-align:center;font-size:15px;"><b>Fig 2: </b>Flow diagram of Fact extraction approach using Open AI text-davinci-002 model.  </p>
 	</div>
+  <div>
+    <br>
+    <p class="font-secondary paragraph-lg text-dark" style="text-align:left;"><b>Failed case:</b>
+    <p class="font-secondary paragraph-lg text-dark" style="text-align:justify;" >We have tried to use the “XLNetForQuestionAnswering” model as an LLM model which is pre-trained with QA Dataset. This Model is then fine-tuned by us with SQuAD 2.0 dataset on “TAMU HPRC”. The input to the model was the queries and retrieved relevant documents (from the cosine similarity step) tokenized by the “xlnet-base-cased ” tokenizer. The results of this model were not satisfactory, and the reason is discussed in the evaluation section. </p>
+  </div>
+  
 </section>
 <!-- ./experience -->
 

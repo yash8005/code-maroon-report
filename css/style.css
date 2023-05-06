@@ -197,8 +197,8 @@ body {
 }
 
 ::selection {
-  /* background: #542cb7; */
-  color: #fff;
+  background: #accef7;
+  /* color: #fff; */
 }
 
 /* preloader */
